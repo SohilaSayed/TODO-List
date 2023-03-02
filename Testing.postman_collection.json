@@ -1,0 +1,420 @@
+{
+	"info": {
+		"_postman_id": "1595027c-4cc4-4eb9-b290-cd648bdeb5c5",
+		"name": "Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25539006"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"sohila\",\r\n    \"email\":\"sohila@gmail.com\",\r\n    \"password\":\"Sohila@110\",\r\n    \"age\":46,\r\n    \"cPassword\":\"Sohila@110\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/signUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"signUp"
+							],
+							"query": [
+								{
+									"key": "flag",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateuser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmY5MGE1OGYyNzNmNzliYTdhM2IyOSIsIm5hbWUiOiJzb2hpbGEiLCJlbWFpbCI6InNvaGlsYUBnbWFpbC5jb20iLCJpc0xvZ2dlZEluIjp0cnVlLCJpYXQiOjE2Nzc2OTY1MjgsImV4cCI6MTY3NzcwMDEyOH0.d3gEaR2oTT0BONqScm65x0f5DDRQzM7tcOK5M0ZRFBE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\":25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteuser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmY5MGE1OGYyNzNmNzliYTdhM2IyOSIsIm5hbWUiOiJzb2hpbGEiLCJlbWFpbCI6InNvaGlsYUBnbWFpbC5jb20iLCJpc0xvZ2dlZEluIjp0cnVlLCJpYXQiOjE2Nzc2OTY1MjgsImV4cCI6MTY3NzcwMDEyOH0.d3gEaR2oTT0BONqScm65x0f5DDRQzM7tcOK5M0ZRFBE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/user/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"sohila@gmail.com\",\r\n    \"password\":\"Sohila@110\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmZhMTBjZGE2MzVmMDQ2YzNlYTkxZCIsIm5hbWUiOiJzb2hpbGEiLCJlbWFpbCI6InNvaGlsYUBnbWFpbC5jb20iLCJpc0xvZ2dlZEluIjp0cnVlLCJpYXQiOjE2Nzc2OTcyOTksImV4cCI6MTY3NzcwMDg5OX0.PZc-VcnXZwRclZyaGB8VDp8-UdIoDBpHIpRDk4SVsmw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmY5MDIwOWRmMzQzZTAxODI2MjRjMyIsIm5hbWUiOiJtb2hhbW1lZCIsImVtYWlsIjoibW9oYW1tZWRAZ21haWwuY29tIiwiaXNMb2dnZWRJbiI6dHJ1ZSwiaWF0IjoxNjc3Njk1NzkwLCJleHAiOjE2Nzc2OTkzOTB9.xzyhSpxQuPqE1T8HIZvJvVZAutNBUsxKREc0FyZUHNw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Note",
+			"item": [
+				{
+					"name": "All Notes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmY5MGE1OGYyNzNmNzliYTdhM2IyOSIsIm5hbWUiOiJzb2hpbGEiLCJlbWFpbCI6InNvaGlsYUBnbWFpbC5jb20iLCJpc0xvZ2dlZEluIjp0cnVlLCJpYXQiOjE2Nzc2OTMxMTMsImV4cCI6MTY3NzY5NjcxM30.2EsxrT1xPp5AqdhHgl6RFIKAqgdHSRvT0IU7pXk_1JI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/note",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"note"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Note",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmY5MGE1OGYyNzNmNzliYTdhM2IyOSIsIm5hbWUiOiJzb2hpbGEiLCJlbWFpbCI6InNvaGlsYUBnbWFpbC5jb20iLCJpc0xvZ2dlZEluIjp0cnVlLCJpYXQiOjE2Nzc2OTY1MjgsImV4cCI6MTY3NzcwMDEyOH0.d3gEaR2oTT0BONqScm65x0f5DDRQzM7tcOK5M0ZRFBE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"sflour\",\r\n    \"description\":\"fdgdgdgdgdgh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/note/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"note",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Note",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmY5MGE1OGYyNzNmNzliYTdhM2IyOSIsIm5hbWUiOiJzb2hpbGEiLCJlbWFpbCI6InNvaGlsYUBnbWFpbC5jb20iLCJpc0xvZ2dlZEluIjp0cnVlLCJpYXQiOjE2Nzc2OTY1MjgsImV4cCI6MTY3NzcwMDEyOH0.d3gEaR2oTT0BONqScm65x0f5DDRQzM7tcOK5M0ZRFBE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Milk\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/note/update/63ff9e207c40b282ef1f0d24",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"note",
+								"update",
+								"63ff9e207c40b282ef1f0d24"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update All Notes",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmY5MGE1OGYyNzNmNzliYTdhM2IyOSIsIm5hbWUiOiJzb2hpbGEiLCJlbWFpbCI6InNvaGlsYUBnbWFpbC5jb20iLCJpc0xvZ2dlZEluIjp0cnVlLCJpYXQiOjE2Nzc2OTY1MjgsImV4cCI6MTY3NzcwMDEyOH0.d3gEaR2oTT0BONqScm65x0f5DDRQzM7tcOK5M0ZRFBE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Milk\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/note/updateAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"note",
+								"updateAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Note",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmY5MGE1OGYyNzNmNzliYTdhM2IyOSIsIm5hbWUiOiJzb2hpbGEiLCJlbWFpbCI6InNvaGlsYUBnbWFpbC5jb20iLCJpc0xvZ2dlZEluIjp0cnVlLCJpYXQiOjE2Nzc2OTMxMTMsImV4cCI6MTY3NzY5NjcxM30.2EsxrT1xPp5AqdhHgl6RFIKAqgdHSRvT0IU7pXk_1JI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/note/delete/63ff9388e67feb006dba008c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"note",
+								"delete",
+								"63ff9388e67feb006dba008c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete All Notes",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmY5MDIwOWRmMzQzZTAxODI2MjRjMyIsIm5hbWUiOiJtb2hhbW1lZCIsImVtYWlsIjoibW9oYW1tZWRAZ21haWwuY29tIiwiaXNMb2dnZWRJbiI6dHJ1ZSwiaWF0IjoxNjc3Njk2MzMyLCJleHAiOjE2Nzc2OTk5MzJ9.FIByefh0eyVd-lvanseC2SVxHW-N3w52ZT1JMEfNdmI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/note/deleteAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"note",
+								"deleteAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Note by Name",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmY5MGE1OGYyNzNmNzliYTdhM2IyOSIsIm5hbWUiOiJzb2hpbGEiLCJlbWFpbCI6InNvaGlsYUBnbWFpbC5jb20iLCJpc0xvZ2dlZEluIjp0cnVlLCJpYXQiOjE2Nzc2OTY1MjgsImV4cCI6MTY3NzcwMDEyOH0.d3gEaR2oTT0BONqScm65x0f5DDRQzM7tcOK5M0ZRFBE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/note/ByName/Milk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"note",
+								"ByName",
+								"Milk"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
